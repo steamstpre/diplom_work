@@ -11,8 +11,9 @@ class LoginCheck extends ChangeNotifier {
   void checkStatusOfLogin() {
     if (_firebaseAuth.currentUser != null) {
       _statusOfLogin = true;
+    } else {
+      _statusOfLogin = false;
     }
-    _statusOfLogin = false;
     notifyListeners();
   }
 }

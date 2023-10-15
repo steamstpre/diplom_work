@@ -31,3 +31,10 @@ class ApiConsts {
   static const apiAccessToken =
       'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1ZWFkMzUxZWFjNDJiNjFkNmUyM2E5OGI5NWY2YmEyZCIsInN1YiI6IjY0MDBhN2Q4YzcxNzZkMDBkYjU5ZGEwMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.uwIl8n0Nh3AvJ4dEhFdVi7gFBIr6eNJp7cVF5GUEolw';
 }
+
+class RepoConsts {
+  RepoConsts._();
+  static const userKey = 'userId';
+  static const userEmail = 'userEmail';
+  static const userPass = 'userPass';
+}
