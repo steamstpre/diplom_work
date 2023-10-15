@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1079133738679",
+    "project_id": "dilpomework",
+    "storage_bucket": "dilpomework.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1079133738679:android:e847792822cb44dc911f32",
+        "android_client_info": {
+          "package_name": "com.check.film.diploma_work"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDredKaEcLYaQ9y1bA2DTJL046qC4ZVsoA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
