@@ -6,7 +6,6 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-//refactore logic of screen, make all inpust outside bloc builder, make enum with status and display it in login screen
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 

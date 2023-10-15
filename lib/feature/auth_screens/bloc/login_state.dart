@@ -8,4 +8,5 @@ class LoginState with _$LoginState {
   const factory LoginState.deniedLogin() = DeniedLogin;
   const factory LoginState.successCreatedUser() = SuccessCreatedUser;
   const factory LoginState.deniedCreateUser() = DeniedCreateUser;
+  const factory LoginState.signInCancelled() = SignInCancelled;
 }

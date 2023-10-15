@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:diploma_work/domain/navigation_service/login_check.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -66,52 +67,70 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
 
   Future<void> _signInByGoogle(SignInByGoogle event, emit) async {
     emit(const Loading());
-    final googleUser = await _googleSignIn.signIn();
-    if (googleUser != null) {
-      final googleAuth = await googleUser.authentication;
-      final credential = GoogleAuthProvider.credential(
-        accessToken: googleAuth.accessToken,
-        idToken: googleAuth.idToken,
-      );
-      _user = await _firebaseAuth.signInWithCredential(credential);
-      getIt<LoginCheck>().checkStatusOfLogin();
-      emit(const SuccessLogin());
-    } else {
-      emit(const DeniedLogin());
+    try {
+      final googleUser = await _googleSignIn.signIn();
+      if (googleUser != null) {
+        final googleAuth = await googleUser.authentication;
+        final credential = GoogleAuthProvider.credential(
+          accessToken: googleAuth.accessToken,
+          idToken: googleAuth.idToken,
+        );
+        _user = await _firebaseAuth.signInWithCredential(credential);
+        getIt<LoginCheck>().checkStatusOfLogin();
+        emit(const SuccessLogin());
+      } else {
+        emit(const DeniedLogin());
+      }
+    } catch (signInEror) {
+      if (signInEror is PlatformException) {
+        switch (signInEror.code) {
+          case "sign_in_canceled":
+            emit(const SignInCancelled());
+            break;
+        }
+      }
     }
   }
 
   Future<void> _signInByApple(SignInByApple event, emit) async {
     emit(const Loading());
-    String clientID = 'com.meest.mymeest.';
-    String redirectURL =
-        'https://grizzled-zippy-cactus.glitch.me/callbacks/sign_in_with_apple';
+    try {
+      String clientID = 'com.meest.mymeest.';
+      String redirectURL =
+          'https://grizzled-zippy-cactus.glitch.me/callbacks/sign_in_with_apple';
 
-    final appleCredential = await SignInWithApple.getAppleIDCredential(
-      scopes: [
-        AppleIDAuthorizationScopes.email,
-        AppleIDAuthorizationScopes.fullName,
-      ],
-      webAuthenticationOptions: Platform.isIOS
-          ? null
-          : WebAuthenticationOptions(
-              clientId: clientID,
-              redirectUri: Uri.parse(redirectURL),
-            ),
-    );
+      final appleCredential = await SignInWithApple.getAppleIDCredential(
+        scopes: [
+          AppleIDAuthorizationScopes.email,
+          AppleIDAuthorizationScopes.fullName,
+        ],
+        webAuthenticationOptions: Platform.isIOS
+            ? null
+            : WebAuthenticationOptions(
+                clientId: clientID,
+                redirectUri: Uri.parse(redirectURL),
+              ),
+      );
 
-    final AuthCredential appleAuthCredential =
-        OAuthProvider('apple.com').credential(
-      idToken: appleCredential.identityToken,
-      accessToken: appleCredential.authorizationCode,
-    );
+      final AuthCredential appleAuthCredential =
+          OAuthProvider('apple.com').credential(
+        idToken: appleCredential.identityToken,
+        accessToken: appleCredential.authorizationCode,
+      );
 
-    _user = await _firebaseAuth.signInWithCredential(appleAuthCredential);
-    if (_user != null) {
-      getIt<LoginCheck>().checkStatusOfLogin();
-      emit(const SuccessLogin());
-    } else {
-      emit(const DeniedLogin());
+      _user = await _firebaseAuth.signInWithCredential(appleAuthCredential);
+      if (_user != null) {
+        getIt<LoginCheck>().checkStatusOfLogin();
+        emit(const SuccessLogin());
+      } else {
+        emit(const DeniedLogin());
+      }
+    } catch (signInEror) {
+      if (signInEror is SignInWithAppleAuthorizationException) {
+        if (signInEror.code == AuthorizationErrorCode.canceled) {
+          emit(const SignInCancelled());
+        }
+      }
     }
   }
 
