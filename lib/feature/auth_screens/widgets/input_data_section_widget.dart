@@ -7,7 +7,11 @@ class InputDataSectionWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [Text(AppLocalizations.of(context)!.helloWorld)],
+      children: [
+        Text(
+          AppLocalizations.of(context)!.helloWorld,
+        ),
+      ],
     );
   }
 }

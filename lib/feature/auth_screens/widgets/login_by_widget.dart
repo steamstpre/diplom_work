@@ -1,9 +1,9 @@
-import 'package:diploma_work/consts/app_consts.dart';
 import 'package:diploma_work/feature/auth_screens/bloc/login_bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LoginByButtonsWidget extends StatelessWidget {
   const LoginByButtonsWidget({super.key});
@@ -42,7 +42,7 @@ class LoginByButtonsWidget extends StatelessWidget {
                         height: 16,
                       ),
                       Text(
-                        AppConsts.signInWihApple,
+                        AppLocalizations.of(context)!.signInWihApple,
                         style: GoogleFonts.amiko()
                             .copyWith(fontSize: 20, color: Colors.white),
                       ),
@@ -85,7 +85,7 @@ class LoginByButtonsWidget extends StatelessWidget {
                         height: 16,
                       ),
                       Text(
-                        AppConsts.signInWithGoogle,
+                        AppLocalizations.of(context)!.signInWithGoogle,
                         style: GoogleFonts.amiko()
                             .copyWith(fontSize: 20, color: Colors.black),
                       ),

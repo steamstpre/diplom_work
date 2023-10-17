@@ -1,5 +1,5 @@
-import 'package:diploma_work/consts/app_consts.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class AuthSectionWidget extends StatefulWidget {
   const AuthSectionWidget({super.key});
@@ -31,7 +31,7 @@ class _AuthSectionWidgetState extends State<AuthSectionWidget>
               child: GestureDetector(
                 onTap: () => _moveLeft(),
                 child: Text(
-                  AppConsts.signIn,
+                  AppLocalizations.of(context)!.signIn,
                   style: Theme.of(context)
                       .textTheme
                       .labelLarge!
@@ -45,7 +45,7 @@ class _AuthSectionWidgetState extends State<AuthSectionWidget>
               child: GestureDetector(
                 onTap: () => _moveRight(),
                 child: Text(
-                  AppConsts.signUp,
+                  AppLocalizations.of(context)!.signUp,
                   style: Theme.of(context)
                       .textTheme
                       .labelLarge!
@@ -78,7 +78,7 @@ class _AuthSectionWidgetState extends State<AuthSectionWidget>
               width: 190,
               height: 3.0,
               child: Container(
-                color: Color.fromARGB(255, 0, 0, 0),
+                color: const Color.fromARGB(255, 0, 0, 0),
               ),
             ),
           ],

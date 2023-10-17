@@ -1,5 +1,5 @@
-import 'package:diploma_work/consts/app_consts.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class OrSection extends StatelessWidget {
   const OrSection({super.key});
@@ -25,7 +25,7 @@ class OrSection extends StatelessWidget {
               ),
             ),
             Text(
-              AppConsts.or,
+              AppLocalizations.of(context)!.or,
               style: Theme.of(context)
                   .textTheme
                   .titleMedium!

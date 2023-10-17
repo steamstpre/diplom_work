@@ -1,4 +1,10 @@
 {
-    "helloWorld": "Hello World!"
-    
+    "helloWorld": "Hello World!",
+    "signIn": "Sign in",
+    "signUp": "Sign in",
+    "or": "or",
+    "signInWithGoogle": "Continue with Google",
+    "signInWihApple":"Continue with Apple",
+    "loginScreenAppBar":"Welcome in #RealTogether",
+    "nameOfApp":"#RealTogeather"
   }

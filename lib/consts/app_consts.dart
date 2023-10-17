@@ -9,14 +9,6 @@ class AppConsts {
 
   static const pathToLogo = 'assets/logo/emoji-happy.svg';
   static const pathToGoogleLogo = 'assets/icons/Google-Logo.svg';
-
-  static const nameOfApp = '#RealTogeather';
-  static const loginScreenAppBar = 'Вітаємо в #RealTogeather';
-  static const signInWihApple = 'Continue with Apple';
-  static const signInWithGoogle = 'Continue with Google';
-  static const or = 'or';
-  static const signIn = 'Sign in';
-  static const signUp = 'Sign up';
 }
 
 class NavigationConsts {

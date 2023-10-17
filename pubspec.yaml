@@ -30,9 +30,11 @@ dependencies:
   google_fonts: ^6.1.0
   font_awesome_flutter: ^10.5.0
   shared_preferences: ^2.2.2
+  intl: ^0.18.1
   flutter_localization: ^0.1.14
   cloud_firestore:
-  intl: any
+  flutter_localizations:
+    sdk: flutter
 
 dev_dependencies:
   flutter_test:

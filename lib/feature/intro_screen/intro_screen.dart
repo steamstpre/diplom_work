@@ -2,6 +2,7 @@ import 'package:diploma_work/consts/app_consts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class IntroScreen extends StatefulWidget {
   const IntroScreen({super.key});
@@ -34,7 +35,7 @@ class _IntroScreenState extends State<IntroScreen> {
             children: [
               SvgPicture.asset(AppConsts.pathToLogo),
               Text(
-                AppConsts.nameOfApp,
+                AppLocalizations.of(context)!.nameOfApp,
                 style: Theme.of(context).textTheme.bodyLarge,
               )
             ],

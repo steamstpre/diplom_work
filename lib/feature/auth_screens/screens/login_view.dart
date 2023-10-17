@@ -1,9 +1,9 @@
-import 'package:diploma_work/consts/app_consts.dart';
 import 'package:diploma_work/feature/auth_screens/widgets/auth_section_widget.dart';
 import 'package:diploma_work/feature/auth_screens/widgets/input_data_section_widget.dart';
 import 'package:diploma_work/feature/auth_screens/widgets/login_by_widget.dart';
 import 'package:diploma_work/feature/auth_screens/widgets/or_section_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({
@@ -20,7 +20,7 @@ class LoginView extends StatelessWidget {
         Align(
           alignment: Alignment.center,
           child: Text(
-            AppConsts.loginScreenAppBar,
+            AppLocalizations.of(context)!.loginScreenAppBar,
             style:
                 Theme.of(context).textTheme.titleLarge!.copyWith(fontSize: 25),
           ),
