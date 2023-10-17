@@ -4,6 +4,7 @@ import 'package:diploma_work/domain/navigation_service/login_check.dart';
 import 'package:diploma_work/feature/account_screen/screen/account_screen.dart';
 import 'package:diploma_work/feature/auth_screens/screens/login_screen.dart';
 import 'package:diploma_work/feature/intro_screen/intro_screen.dart';
+import 'package:diploma_work/feature/main_screen/bloc/main_screen_bloc.dart';
 import 'package:diploma_work/feature/main_screen/screen/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -52,8 +53,36 @@ class NavigationService {
             }),
         GoRoute(
           path: AppConsts.pathToMainScreen,
-          builder: (BuildContext context, GoRouterState state) =>
-              const MainScreen(),
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            final mainScreen = BlocProvider(
+              create: (context) => MainScreenBloc(),
+              child: const MainScreen(),
+            );
+            if (getIt<LoginCheck>().statusOfLogin) {
+              return CustomTransitionPage(
+                key: state.pageKey,
+                child: mainScreen,
+                transitionsBuilder:
+                    (context, animation, secondaryAnimation, child) =>
+                        FadeTransition(
+                  opacity: CurveTween(curve: Curves.linear).animate(animation),
+                  child: child,
+                ),
+              );
+            } else {
+              return CustomTransitionPage(
+                key: state.pageKey,
+                child: mainScreen,
+                transitionsBuilder:
+                    (context, animation, secondaryAnimation, child) =>
+                        FadeTransition(
+                  opacity: CurveTween(curve: Curves.easeInOutCirc)
+                      .animate(animation),
+                  child: child,
+                ),
+              );
+            }
+          },
         ),
         GoRoute(
           path: AppConsts.pathToAccountScreen,

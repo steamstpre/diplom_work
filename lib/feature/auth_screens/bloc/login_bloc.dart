@@ -134,6 +134,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   }
 
   Future<void> _signOut(SignOut event, emit) async {
+    emit(const SignOutState());
     await _firebaseAuth.signOut();
     getIt<LoginCheck>().checkStatusOfLogin();
   }

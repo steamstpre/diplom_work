@@ -799,6 +799,7 @@ mixin _$LoginState {
     required TResult Function() successCreatedUser,
     required TResult Function() deniedCreateUser,
     required TResult Function() signInCancelled,
+    required TResult Function() signOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -810,6 +811,7 @@ mixin _$LoginState {
     TResult? Function()? successCreatedUser,
     TResult? Function()? deniedCreateUser,
     TResult? Function()? signInCancelled,
+    TResult? Function()? signOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -821,6 +823,7 @@ mixin _$LoginState {
     TResult Function()? successCreatedUser,
     TResult Function()? deniedCreateUser,
     TResult Function()? signInCancelled,
+    TResult Function()? signOut,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -833,6 +836,7 @@ mixin _$LoginState {
     required TResult Function(SuccessCreatedUser value) successCreatedUser,
     required TResult Function(DeniedCreateUser value) deniedCreateUser,
     required TResult Function(SignInCancelled value) signInCancelled,
+    required TResult Function(SignOutState value) signOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -844,6 +848,7 @@ mixin _$LoginState {
     TResult? Function(SuccessCreatedUser value)? successCreatedUser,
     TResult? Function(DeniedCreateUser value)? deniedCreateUser,
     TResult? Function(SignInCancelled value)? signInCancelled,
+    TResult? Function(SignOutState value)? signOut,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -855,6 +860,7 @@ mixin _$LoginState {
     TResult Function(SuccessCreatedUser value)? successCreatedUser,
     TResult Function(DeniedCreateUser value)? deniedCreateUser,
     TResult Function(SignInCancelled value)? signInCancelled,
+    TResult Function(SignOutState value)? signOut,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -922,6 +928,7 @@ class _$_Initial implements _Initial {
     required TResult Function() successCreatedUser,
     required TResult Function() deniedCreateUser,
     required TResult Function() signInCancelled,
+    required TResult Function() signOut,
   }) {
     return initial();
   }
@@ -936,6 +943,7 @@ class _$_Initial implements _Initial {
     TResult? Function()? successCreatedUser,
     TResult? Function()? deniedCreateUser,
     TResult? Function()? signInCancelled,
+    TResult? Function()? signOut,
   }) {
     return initial?.call();
   }
@@ -950,6 +958,7 @@ class _$_Initial implements _Initial {
     TResult Function()? successCreatedUser,
     TResult Function()? deniedCreateUser,
     TResult Function()? signInCancelled,
+    TResult Function()? signOut,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -968,6 +977,7 @@ class _$_Initial implements _Initial {
     required TResult Function(SuccessCreatedUser value) successCreatedUser,
     required TResult Function(DeniedCreateUser value) deniedCreateUser,
     required TResult Function(SignInCancelled value) signInCancelled,
+    required TResult Function(SignOutState value) signOut,
   }) {
     return initial(this);
   }
@@ -982,6 +992,7 @@ class _$_Initial implements _Initial {
     TResult? Function(SuccessCreatedUser value)? successCreatedUser,
     TResult? Function(DeniedCreateUser value)? deniedCreateUser,
     TResult? Function(SignInCancelled value)? signInCancelled,
+    TResult? Function(SignOutState value)? signOut,
   }) {
     return initial?.call(this);
   }
@@ -996,6 +1007,7 @@ class _$_Initial implements _Initial {
     TResult Function(SuccessCreatedUser value)? successCreatedUser,
     TResult Function(DeniedCreateUser value)? deniedCreateUser,
     TResult Function(SignInCancelled value)? signInCancelled,
+    TResult Function(SignOutState value)? signOut,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -1054,6 +1066,7 @@ class _$SuccessLogin implements SuccessLogin {
     required TResult Function() successCreatedUser,
     required TResult Function() deniedCreateUser,
     required TResult Function() signInCancelled,
+    required TResult Function() signOut,
   }) {
     return successLogin();
   }
@@ -1068,6 +1081,7 @@ class _$SuccessLogin implements SuccessLogin {
     TResult? Function()? successCreatedUser,
     TResult? Function()? deniedCreateUser,
     TResult? Function()? signInCancelled,
+    TResult? Function()? signOut,
   }) {
     return successLogin?.call();
   }
@@ -1082,6 +1096,7 @@ class _$SuccessLogin implements SuccessLogin {
     TResult Function()? successCreatedUser,
     TResult Function()? deniedCreateUser,
     TResult Function()? signInCancelled,
+    TResult Function()? signOut,
     required TResult orElse(),
   }) {
     if (successLogin != null) {
@@ -1100,6 +1115,7 @@ class _$SuccessLogin implements SuccessLogin {
     required TResult Function(SuccessCreatedUser value) successCreatedUser,
     required TResult Function(DeniedCreateUser value) deniedCreateUser,
     required TResult Function(SignInCancelled value) signInCancelled,
+    required TResult Function(SignOutState value) signOut,
   }) {
     return successLogin(this);
   }
@@ -1114,6 +1130,7 @@ class _$SuccessLogin implements SuccessLogin {
     TResult? Function(SuccessCreatedUser value)? successCreatedUser,
     TResult? Function(DeniedCreateUser value)? deniedCreateUser,
     TResult? Function(SignInCancelled value)? signInCancelled,
+    TResult? Function(SignOutState value)? signOut,
   }) {
     return successLogin?.call(this);
   }
@@ -1128,6 +1145,7 @@ class _$SuccessLogin implements SuccessLogin {
     TResult Function(SuccessCreatedUser value)? successCreatedUser,
     TResult Function(DeniedCreateUser value)? deniedCreateUser,
     TResult Function(SignInCancelled value)? signInCancelled,
+    TResult Function(SignOutState value)? signOut,
     required TResult orElse(),
   }) {
     if (successLogin != null) {
@@ -1184,6 +1202,7 @@ class _$Loading implements Loading {
     required TResult Function() successCreatedUser,
     required TResult Function() deniedCreateUser,
     required TResult Function() signInCancelled,
+    required TResult Function() signOut,
   }) {
     return loading();
   }
@@ -1198,6 +1217,7 @@ class _$Loading implements Loading {
     TResult? Function()? successCreatedUser,
     TResult? Function()? deniedCreateUser,
     TResult? Function()? signInCancelled,
+    TResult? Function()? signOut,
   }) {
     return loading?.call();
   }
@@ -1212,6 +1232,7 @@ class _$Loading implements Loading {
     TResult Function()? successCreatedUser,
     TResult Function()? deniedCreateUser,
     TResult Function()? signInCancelled,
+    TResult Function()? signOut,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1230,6 +1251,7 @@ class _$Loading implements Loading {
     required TResult Function(SuccessCreatedUser value) successCreatedUser,
     required TResult Function(DeniedCreateUser value) deniedCreateUser,
     required TResult Function(SignInCancelled value) signInCancelled,
+    required TResult Function(SignOutState value) signOut,
   }) {
     return loading(this);
   }
@@ -1244,6 +1266,7 @@ class _$Loading implements Loading {
     TResult? Function(SuccessCreatedUser value)? successCreatedUser,
     TResult? Function(DeniedCreateUser value)? deniedCreateUser,
     TResult? Function(SignInCancelled value)? signInCancelled,
+    TResult? Function(SignOutState value)? signOut,
   }) {
     return loading?.call(this);
   }
@@ -1258,6 +1281,7 @@ class _$Loading implements Loading {
     TResult Function(SuccessCreatedUser value)? successCreatedUser,
     TResult Function(DeniedCreateUser value)? deniedCreateUser,
     TResult Function(SignInCancelled value)? signInCancelled,
+    TResult Function(SignOutState value)? signOut,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -1316,6 +1340,7 @@ class _$DeniedLogin implements DeniedLogin {
     required TResult Function() successCreatedUser,
     required TResult Function() deniedCreateUser,
     required TResult Function() signInCancelled,
+    required TResult Function() signOut,
   }) {
     return deniedLogin();
   }
@@ -1330,6 +1355,7 @@ class _$DeniedLogin implements DeniedLogin {
     TResult? Function()? successCreatedUser,
     TResult? Function()? deniedCreateUser,
     TResult? Function()? signInCancelled,
+    TResult? Function()? signOut,
   }) {
     return deniedLogin?.call();
   }
@@ -1344,6 +1370,7 @@ class _$DeniedLogin implements DeniedLogin {
     TResult Function()? successCreatedUser,
     TResult Function()? deniedCreateUser,
     TResult Function()? signInCancelled,
+    TResult Function()? signOut,
     required TResult orElse(),
   }) {
     if (deniedLogin != null) {
@@ -1362,6 +1389,7 @@ class _$DeniedLogin implements DeniedLogin {
     required TResult Function(SuccessCreatedUser value) successCreatedUser,
     required TResult Function(DeniedCreateUser value) deniedCreateUser,
     required TResult Function(SignInCancelled value) signInCancelled,
+    required TResult Function(SignOutState value) signOut,
   }) {
     return deniedLogin(this);
   }
@@ -1376,6 +1404,7 @@ class _$DeniedLogin implements DeniedLogin {
     TResult? Function(SuccessCreatedUser value)? successCreatedUser,
     TResult? Function(DeniedCreateUser value)? deniedCreateUser,
     TResult? Function(SignInCancelled value)? signInCancelled,
+    TResult? Function(SignOutState value)? signOut,
   }) {
     return deniedLogin?.call(this);
   }
@@ -1390,6 +1419,7 @@ class _$DeniedLogin implements DeniedLogin {
     TResult Function(SuccessCreatedUser value)? successCreatedUser,
     TResult Function(DeniedCreateUser value)? deniedCreateUser,
     TResult Function(SignInCancelled value)? signInCancelled,
+    TResult Function(SignOutState value)? signOut,
     required TResult orElse(),
   }) {
     if (deniedLogin != null) {
@@ -1448,6 +1478,7 @@ class _$SuccessCreatedUser implements SuccessCreatedUser {
     required TResult Function() successCreatedUser,
     required TResult Function() deniedCreateUser,
     required TResult Function() signInCancelled,
+    required TResult Function() signOut,
   }) {
     return successCreatedUser();
   }
@@ -1462,6 +1493,7 @@ class _$SuccessCreatedUser implements SuccessCreatedUser {
     TResult? Function()? successCreatedUser,
     TResult? Function()? deniedCreateUser,
     TResult? Function()? signInCancelled,
+    TResult? Function()? signOut,
   }) {
     return successCreatedUser?.call();
   }
@@ -1476,6 +1508,7 @@ class _$SuccessCreatedUser implements SuccessCreatedUser {
     TResult Function()? successCreatedUser,
     TResult Function()? deniedCreateUser,
     TResult Function()? signInCancelled,
+    TResult Function()? signOut,
     required TResult orElse(),
   }) {
     if (successCreatedUser != null) {
@@ -1494,6 +1527,7 @@ class _$SuccessCreatedUser implements SuccessCreatedUser {
     required TResult Function(SuccessCreatedUser value) successCreatedUser,
     required TResult Function(DeniedCreateUser value) deniedCreateUser,
     required TResult Function(SignInCancelled value) signInCancelled,
+    required TResult Function(SignOutState value) signOut,
   }) {
     return successCreatedUser(this);
   }
@@ -1508,6 +1542,7 @@ class _$SuccessCreatedUser implements SuccessCreatedUser {
     TResult? Function(SuccessCreatedUser value)? successCreatedUser,
     TResult? Function(DeniedCreateUser value)? deniedCreateUser,
     TResult? Function(SignInCancelled value)? signInCancelled,
+    TResult? Function(SignOutState value)? signOut,
   }) {
     return successCreatedUser?.call(this);
   }
@@ -1522,6 +1557,7 @@ class _$SuccessCreatedUser implements SuccessCreatedUser {
     TResult Function(SuccessCreatedUser value)? successCreatedUser,
     TResult Function(DeniedCreateUser value)? deniedCreateUser,
     TResult Function(SignInCancelled value)? signInCancelled,
+    TResult Function(SignOutState value)? signOut,
     required TResult orElse(),
   }) {
     if (successCreatedUser != null) {
@@ -1580,6 +1616,7 @@ class _$DeniedCreateUser implements DeniedCreateUser {
     required TResult Function() successCreatedUser,
     required TResult Function() deniedCreateUser,
     required TResult Function() signInCancelled,
+    required TResult Function() signOut,
   }) {
     return deniedCreateUser();
   }
@@ -1594,6 +1631,7 @@ class _$DeniedCreateUser implements DeniedCreateUser {
     TResult? Function()? successCreatedUser,
     TResult? Function()? deniedCreateUser,
     TResult? Function()? signInCancelled,
+    TResult? Function()? signOut,
   }) {
     return deniedCreateUser?.call();
   }
@@ -1608,6 +1646,7 @@ class _$DeniedCreateUser implements DeniedCreateUser {
     TResult Function()? successCreatedUser,
     TResult Function()? deniedCreateUser,
     TResult Function()? signInCancelled,
+    TResult Function()? signOut,
     required TResult orElse(),
   }) {
     if (deniedCreateUser != null) {
@@ -1626,6 +1665,7 @@ class _$DeniedCreateUser implements DeniedCreateUser {
     required TResult Function(SuccessCreatedUser value) successCreatedUser,
     required TResult Function(DeniedCreateUser value) deniedCreateUser,
     required TResult Function(SignInCancelled value) signInCancelled,
+    required TResult Function(SignOutState value) signOut,
   }) {
     return deniedCreateUser(this);
   }
@@ -1640,6 +1680,7 @@ class _$DeniedCreateUser implements DeniedCreateUser {
     TResult? Function(SuccessCreatedUser value)? successCreatedUser,
     TResult? Function(DeniedCreateUser value)? deniedCreateUser,
     TResult? Function(SignInCancelled value)? signInCancelled,
+    TResult? Function(SignOutState value)? signOut,
   }) {
     return deniedCreateUser?.call(this);
   }
@@ -1654,6 +1695,7 @@ class _$DeniedCreateUser implements DeniedCreateUser {
     TResult Function(SuccessCreatedUser value)? successCreatedUser,
     TResult Function(DeniedCreateUser value)? deniedCreateUser,
     TResult Function(SignInCancelled value)? signInCancelled,
+    TResult Function(SignOutState value)? signOut,
     required TResult orElse(),
   }) {
     if (deniedCreateUser != null) {
@@ -1712,6 +1754,7 @@ class _$SignInCancelled implements SignInCancelled {
     required TResult Function() successCreatedUser,
     required TResult Function() deniedCreateUser,
     required TResult Function() signInCancelled,
+    required TResult Function() signOut,
   }) {
     return signInCancelled();
   }
@@ -1726,6 +1769,7 @@ class _$SignInCancelled implements SignInCancelled {
     TResult? Function()? successCreatedUser,
     TResult? Function()? deniedCreateUser,
     TResult? Function()? signInCancelled,
+    TResult? Function()? signOut,
   }) {
     return signInCancelled?.call();
   }
@@ -1740,6 +1784,7 @@ class _$SignInCancelled implements SignInCancelled {
     TResult Function()? successCreatedUser,
     TResult Function()? deniedCreateUser,
     TResult Function()? signInCancelled,
+    TResult Function()? signOut,
     required TResult orElse(),
   }) {
     if (signInCancelled != null) {
@@ -1758,6 +1803,7 @@ class _$SignInCancelled implements SignInCancelled {
     required TResult Function(SuccessCreatedUser value) successCreatedUser,
     required TResult Function(DeniedCreateUser value) deniedCreateUser,
     required TResult Function(SignInCancelled value) signInCancelled,
+    required TResult Function(SignOutState value) signOut,
   }) {
     return signInCancelled(this);
   }
@@ -1772,6 +1818,7 @@ class _$SignInCancelled implements SignInCancelled {
     TResult? Function(SuccessCreatedUser value)? successCreatedUser,
     TResult? Function(DeniedCreateUser value)? deniedCreateUser,
     TResult? Function(SignInCancelled value)? signInCancelled,
+    TResult? Function(SignOutState value)? signOut,
   }) {
     return signInCancelled?.call(this);
   }
@@ -1786,6 +1833,7 @@ class _$SignInCancelled implements SignInCancelled {
     TResult Function(SuccessCreatedUser value)? successCreatedUser,
     TResult Function(DeniedCreateUser value)? deniedCreateUser,
     TResult Function(SignInCancelled value)? signInCancelled,
+    TResult Function(SignOutState value)? signOut,
     required TResult orElse(),
   }) {
     if (signInCancelled != null) {
@@ -1797,4 +1845,142 @@ class _$SignInCancelled implements SignInCancelled {
 
 abstract class SignInCancelled implements LoginState {
   const factory SignInCancelled() = _$SignInCancelled;
+}
+
+/// @nodoc
+abstract class _$$SignOutStateCopyWith<$Res> {
+  factory _$$SignOutStateCopyWith(
+          _$SignOutState value, $Res Function(_$SignOutState) then) =
+      __$$SignOutStateCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SignOutStateCopyWithImpl<$Res>
+    extends _$LoginStateCopyWithImpl<$Res, _$SignOutState>
+    implements _$$SignOutStateCopyWith<$Res> {
+  __$$SignOutStateCopyWithImpl(
+      _$SignOutState _value, $Res Function(_$SignOutState) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$SignOutState implements SignOutState {
+  const _$SignOutState();
+
+  @override
+  String toString() {
+    return 'LoginState.signOut()';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SignOutState);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() successLogin,
+    required TResult Function() loading,
+    required TResult Function() deniedLogin,
+    required TResult Function() successCreatedUser,
+    required TResult Function() deniedCreateUser,
+    required TResult Function() signInCancelled,
+    required TResult Function() signOut,
+  }) {
+    return signOut();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? successLogin,
+    TResult? Function()? loading,
+    TResult? Function()? deniedLogin,
+    TResult? Function()? successCreatedUser,
+    TResult? Function()? deniedCreateUser,
+    TResult? Function()? signInCancelled,
+    TResult? Function()? signOut,
+  }) {
+    return signOut?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? successLogin,
+    TResult Function()? loading,
+    TResult Function()? deniedLogin,
+    TResult Function()? successCreatedUser,
+    TResult Function()? deniedCreateUser,
+    TResult Function()? signInCancelled,
+    TResult Function()? signOut,
+    required TResult orElse(),
+  }) {
+    if (signOut != null) {
+      return signOut();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(SuccessLogin value) successLogin,
+    required TResult Function(Loading value) loading,
+    required TResult Function(DeniedLogin value) deniedLogin,
+    required TResult Function(SuccessCreatedUser value) successCreatedUser,
+    required TResult Function(DeniedCreateUser value) deniedCreateUser,
+    required TResult Function(SignInCancelled value) signInCancelled,
+    required TResult Function(SignOutState value) signOut,
+  }) {
+    return signOut(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(SuccessLogin value)? successLogin,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(DeniedLogin value)? deniedLogin,
+    TResult? Function(SuccessCreatedUser value)? successCreatedUser,
+    TResult? Function(DeniedCreateUser value)? deniedCreateUser,
+    TResult? Function(SignInCancelled value)? signInCancelled,
+    TResult? Function(SignOutState value)? signOut,
+  }) {
+    return signOut?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(SuccessLogin value)? successLogin,
+    TResult Function(Loading value)? loading,
+    TResult Function(DeniedLogin value)? deniedLogin,
+    TResult Function(SuccessCreatedUser value)? successCreatedUser,
+    TResult Function(DeniedCreateUser value)? deniedCreateUser,
+    TResult Function(SignInCancelled value)? signInCancelled,
+    TResult Function(SignOutState value)? signOut,
+    required TResult orElse(),
+  }) {
+    if (signOut != null) {
+      return signOut(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignOutState implements LoginState {
+  const factory SignOutState() = _$SignOutState;
 }
