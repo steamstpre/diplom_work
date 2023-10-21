@@ -12,6 +12,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
 
   go_router: ^10.2.0
   flutter_bloc: ^8.1.3
@@ -33,8 +35,7 @@ dependencies:
   intl: ^0.18.1
   flutter_localization: ^0.1.14
   cloud_firestore:
-  flutter_localizations:
-    sdk: flutter
+  
 
 dev_dependencies:
   flutter_test:
