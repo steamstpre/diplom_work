@@ -6,5 +6,8 @@
     "signInWithGoogle": "Continue with Google",
     "signInWihApple":"Continue with Apple",
     "loginScreenAppBar":"Welcome in #RealTogether",
-    "nameOfApp":"#RealTogeather"
+    "nameOfApp":"#RealTogeather",
+    "email":"Email",
+    "password":"Password",
+    "forgotPassword":"Forgot password?"
   }

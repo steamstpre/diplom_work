@@ -34,7 +34,7 @@ class LoginView extends StatelessWidget {
         ),
         const OrSection(),
         const AuthSectionWidget(),
-        const InputDataSectionWidget(),
+        //const InputDataSectionWidget(),
       ],
     ));
   }
