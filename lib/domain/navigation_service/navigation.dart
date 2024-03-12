@@ -1,5 +1,5 @@
 import 'package:diploma_work/consts/app_consts.dart';
-import 'package:diploma_work/data/di/di.dart';
+import 'package:diploma_work/domain/di/di.dart';
 import 'package:diploma_work/domain/navigation_service/login_check.dart';
 import 'package:diploma_work/feature/account_screen/screen/account_screen.dart';
 import 'package:diploma_work/feature/auth_screens/screens/login_screen.dart';
@@ -45,7 +45,6 @@ class NavigationService {
                   ),
                 ),
             redirect: (context, state) {
-              getIt<LoginCheck>().checkStatusOfLogin();
               if (getIt<LoginCheck>().statusOfLogin) {
                 return AppConsts.pathToMainScreen;
               }

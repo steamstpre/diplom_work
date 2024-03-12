@@ -1,5 +1,4 @@
 import 'package:diploma_work/feature/auth_screens/widgets/auth_section_widget.dart';
-import 'package:diploma_work/feature/auth_screens/widgets/input_data_section_widget.dart';
 import 'package:diploma_work/feature/auth_screens/widgets/login_by_widget.dart';
 import 'package:diploma_work/feature/auth_screens/widgets/or_section_widget.dart';
 import 'package:flutter/material.dart';

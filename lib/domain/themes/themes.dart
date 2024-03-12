@@ -15,7 +15,6 @@ class Themes {
         colorScheme: ColorScheme.fromSeed(
           seedColor: const Color(0xFFA283BB),
         ),
-        useMaterial3: true,
       );
 
   ThemeData get darkTheme => _darkTheme.copyWith(
@@ -29,6 +28,5 @@ class Themes {
           seedColor: const Color(0xFFA283BB),
           background: const Color(0xFFA283BB),
         ),
-        useMaterial3: true,
       );
 }

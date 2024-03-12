@@ -1,6 +1,6 @@
 import 'dart:async';
-import 'package:diploma_work/data/di/di.dart';
-import 'package:diploma_work/data/services/request_notification_service.dart';
+import 'package:diploma_work/domain/di/di.dart';
+import 'package:diploma_work/domain/services/request_notification_service.dart';
 import 'package:diploma_work/domain/navigation_service/navigation.dart';
 import 'package:diploma_work/domain/themes/themes.dart';
 import 'package:diploma_work/firebase_options.dart';

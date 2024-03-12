@@ -17,9 +17,9 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   final _googleSignIn = GoogleSignIn();
   final getIt = GetIt.instance;
-  UserCredential? _user;
+  UserCredential? _user; //move to repo
 
-  UserCredential get user => _user!;
+  UserCredential get user => _user!; //move to repo
 
   LoginBloc() : super(const LoginState.initial()) {
     on<LoginEvent>(
@@ -40,7 +40,6 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
       password: event.password,
     );
     if (result.user != null) {
-      getIt<LoginCheck>().checkStatusOfLogin();
       emit(const SuccessLogin());
     } else {
       emit(const DeniedLogin());
@@ -65,6 +64,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   }
 
   Future<void> _signInByGoogle(SignInByGoogle event, emit) async {
+    //TO DO: move this method to anther service wich will handle auth
     emit(const Loading());
     try {
       final googleUser = await _googleSignIn.signIn();
@@ -75,7 +75,6 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
           idToken: googleAuth.idToken,
         );
         _user = await _firebaseAuth.signInWithCredential(credential);
-        getIt<LoginCheck>().checkStatusOfLogin();
         emit(const SuccessLogin());
       } else {
         emit(const DeniedLogin());
@@ -92,6 +91,7 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   }
 
   Future<void> _signInByApple(SignInByApple event, emit) async {
+    //TO DO: same as prev method
     emit(const Loading());
     try {
       String clientID = 'com.meest.mymeest.';
@@ -119,7 +119,6 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
 
       _user = await _firebaseAuth.signInWithCredential(appleAuthCredential);
       if (_user != null) {
-        getIt<LoginCheck>().checkStatusOfLogin();
         emit(const SuccessLogin());
       } else {
         emit(const DeniedLogin());
@@ -136,6 +135,5 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   Future<void> _signOut(SignOut event, emit) async {
     emit(const SignOutState());
     await _firebaseAuth.signOut();
-    getIt<LoginCheck>().checkStatusOfLogin();
   }
 }

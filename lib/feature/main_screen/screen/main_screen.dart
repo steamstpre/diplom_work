@@ -1,5 +1,5 @@
 import 'package:diploma_work/consts/app_consts.dart';
-import 'package:diploma_work/data/di/di.dart';
+import 'package:diploma_work/domain/di/di.dart';
 import 'package:diploma_work/feature/auth_screens/bloc/login_bloc.dart';
 import 'package:diploma_work/feature/main_screen/bloc/main_screen_bloc.dart';
 import 'package:flutter/material.dart';
