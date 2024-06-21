@@ -21,7 +21,7 @@ class LoginView extends StatelessWidget {
           child: Text(
             AppLocalizations.of(context)!.loginScreenAppBar,
             style:
-                Theme.of(context).textTheme.titleLarge!.copyWith(fontSize: 25),
+                Theme.of(context).textTheme.titleLarge?.copyWith(fontSize: 25),
           ),
         ),
         const SizedBox(

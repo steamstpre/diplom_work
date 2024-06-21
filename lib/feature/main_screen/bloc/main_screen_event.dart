@@ -1,6 +1,7 @@
-part of 'main_screen_bloc.dart';
+part of 'list_screen_bloc.dart';
 
 @freezed
-class MainScreenEvent with _$MainScreenEvent {
-  const factory MainScreenEvent.started() = _Started;
+class ListScreenEvent with _$ListScreenEvent {
+  const factory ListScreenEvent.search({required String nameOfFilm}) = Search;
+  const factory ListScreenEvent.cleanSearch() = CleanSearch;
 }

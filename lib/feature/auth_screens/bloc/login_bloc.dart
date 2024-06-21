@@ -63,7 +63,6 @@ class LoginBloc extends Bloc<LoginEvent, LoginState> {
   }
 
   Future<void> _signInByGoogle(SignInByGoogle event, emit) async {
-    //TO DO: move this method to anther service wich will handle auth
     emit(const Loading());
     try {
       final googleUser = await _googleSignIn.signIn();
